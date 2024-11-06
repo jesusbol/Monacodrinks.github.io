@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monaco Drinks</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo de Monaco Drinks" id="logo">
+        <h1>Gestión de Inventario - Monaco Drinks</h1>
+    </header>
+
+    <div class="container">
+        <h2>Agregar Producto</h2>
+        <form id="addProductForm">
+            <input type="text" id="newProductName" placeholder="Nombre del Producto" required>
+            <input type="number" id="newProductBodega" placeholder="Cantidad en Bodega" required>
+            <input type="number" id="newProductLocal" placeholder="Cantidad en Local" required>
+            <input type="submit" value="Agregar Producto">
+        </form>
+
+        <h2>Inventario</h2>
+        <table id="inventoryTable">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Bodega</th>
+                    <th>Local</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Los productos serán cargados aquí por el script -->
+            </tbody>
+        </table>
+
+        <h2>Productos Guardados</h2>
+        <div id="savedProducts">
+            <!-- Los productos guardados se mostrarán aquí -->
+        </div>
+
+        <h2>Generar PDF</h2>
+        <button id="exportPdf">Generar PDF</button>
+
+        <h2>Historial de Descargas de PDF</h2>
+        <div id="pdfDownloadLog">
+            <button id="downloadPdfButton">Descargar PDF</button>
+            <ul id="pdfDownloadList">
+                <!-- El historial de descargas se mostrará aquí -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
